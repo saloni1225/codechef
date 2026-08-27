@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int a[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        int max=INT_MIN;
+        int secmax=INT_MIN;
+        for(int i=0;i<n;i++){
+            if(a[i]>max){
+                secmax=max;
+                max=a[i];
+            }
+           else if(a[i]>secmax && a[i]!=max)secmax=a[i];
+        }
+            
+        cout<<max+secmax<<endl;
+        }
+    }
+    
