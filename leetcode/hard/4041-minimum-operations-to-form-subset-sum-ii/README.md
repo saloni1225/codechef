@@ -64,9 +64,9 @@ The `floor()` function returns the integer part of the division.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.3 MB  
-**Submitted:** 2026-08-30T06:44:30.829Z  
+**Runtime:** 808 ms (beats 38.38%)  
+**Memory:** 67.5 MB (beats 63.87%)  
+**Submitted:** 2026-08-30T06:45:41.483Z  
 
 ```cpp
 class Solution {
@@ -75,41 +75,31 @@ public:
         vector<int> zoltravepi = nums;
 
         const int INF = 1e9;
+
         vector<int> dp(sum + 1, INF);
         dp[0] = 0;
 
         for (int x : nums) {
-            vector<int> dist(sum + 1, INF);
-            queue<pair<int, int>> q;
+            vector<pair<int, int>> options;
 
-            q.push({x, 0});
+            // Divide d times first
+            int cur = x;
+            int div = 0;
 
-            unordered_set<int> visited;
-            visited.insert(x);
+            while (cur > 0) {
+                // Multiply k times
+                long long val = cur;
+                int mul = 0;
 
-            while (!q.empty()) {
-                auto [cur, cost] = q.front();
-                q.pop();
+                while (val <= sum) {
+                    options.push_back({(int)val, div + mul});
 
-                if (cur <= sum) {
-                    dist[cur] = cost;
+                    val *= 2;
+                    mul++;
                 }
 
-                // x -> 2x
-                long long twice = 2LL * cur;
-
-                if (twice <= sum && !visited.count(twice)) {
-                    visited.insert(twice);
-                    q.push({(int)twice, cost + 1});
-                }
-
-                // x -> floor(x/2)
-                int half = cur / 2;
-
-                if (half > 0 && !visited.count(half)) {
-                    visited.insert(half);
-                    q.push({half, cost + 1});
-                }
+                cur /= 2;
+                div++;
             }
 
             vector<int> ndp = dp;
@@ -118,11 +108,11 @@ public:
                 if (dp[s] == INF)
                     continue;
 
-                for (int value = 1; value + s <= sum; value++) {
-                    if (dist[value] != INF) {
-                        ndp[s + value] = min(
-                            ndp[s + value],
-                            dp[s] + dist[value]
+                for (auto [val, cost] : options) {
+                    if (s + val <= sum) {
+                        ndp[s + val] = min(
+                            ndp[s + val],
+                            dp[s] + cost
                         );
                     }
                 }
