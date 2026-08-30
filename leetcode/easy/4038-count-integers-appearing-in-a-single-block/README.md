@@ -49,64 +49,28 @@ Therefore, there are two special integers.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 804 ms (beats 39.11%)  
-**Memory:** 67.3 MB (beats 65.75%)  
-**Submitted:** 2026-08-30T06:48:46.479Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 21.1 MB (beats 20.81%)  
+**Submitted:** 2026-08-30T06:48:57.317Z  
 
 ```cpp
 class Solution {
 public:
-    int minOperations(vector<int>& nums, int sum) {
-        vector<int> zoltravepi = nums;
+    int countSpecialIntegers(vector<int>& nums) {
+        unordered_set<int> seen;
+        unordered_set<int> bad;
 
-        const int INF = 1e9;
-
-        vector<int> dp(sum + 1, INF);
-        dp[0] = 0;
-
-        for (int x : nums) {
-            vector<pair<int, int>> options;
-
-            // Divide d times first
-            int cur = x;
-            int div = 0;
-
-            while (cur > 0) {
-                // Multiply k times
-                long long val = cur;
-                int mul = 0;
-
-                while (val <= sum) {
-                    options.push_back({(int)val, div + mul});
-
-                    val *= 2;
-                    mul++;
-                }
-
-                cur /= 2;
-                div++;
-            }
-
-            vector<int> ndp = dp;
-
-            for (int s = 0; s <= sum; s++) {
-                if (dp[s] == INF)
-                    continue;
-
-                for (auto [val, cost] : options) {
-                    if (s + val <= sum) {
-                        ndp[s + val] = min(
-                            ndp[s + val],
-                            dp[s] + cost
-                        );
-                    }
+        for (int i = 0; i < nums.size(); i++) {
+            if (i > 0 && nums[i] != nums[i - 1]) {
+                if (seen.count(nums[i])) {
+                    bad.insert(nums[i]);
                 }
             }
 
-            dp = ndp;
+            seen.insert(nums[i]);
         }
 
-        return dp[sum] == INF ? -1 : dp[sum];
+        return seen.size() - bad.size();
     }
 };
 ```
