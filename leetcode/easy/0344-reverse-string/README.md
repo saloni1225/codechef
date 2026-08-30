@@ -36,24 +36,15 @@ Output: ["h","a","n","n","a","H"]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 74 ms (beats 2.13%)  
-**Memory:** 27.3 MB (beats 15.74%)  
-**Submitted:** 2026-08-30T16:32:52.144Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 27.3 MB (beats 52.44%)  
+**Submitted:** 2026-08-30T16:38:31.662Z  
 
 ```cpp
 class Solution {
 public:
     void reverseString(vector<char>& s) {
-        int left=0;
-        int right=s.size()-1;
-        while(left<right){
-            swap(s[left],s[right]);
-            left++;
-            right--;
-        }
-          for (char c : s) {
-        cout << c;
-    }
+        reverse(s.begin(),s.end());
     }
 };
 ```
