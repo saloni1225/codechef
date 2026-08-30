@@ -49,9 +49,9 @@ Therefore, there are two special integers.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 21 MB (beats 24.39%)  
-**Submitted:** 2026-08-30T06:34:34.097Z  
+**Runtime:** 11 ms (beats 3.08%)  
+**Memory:** 33.2 MB (beats 6.35%)  
+**Submitted:** 2026-08-30T06:48:12.989Z  
 
 ```cpp
 class Solution {
