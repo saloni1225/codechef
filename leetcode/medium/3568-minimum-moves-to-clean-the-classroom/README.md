@@ -69,9 +69,9 @@ No valid path collects all `'L'`.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.4 MB  
-**Submitted:** 2026-09-01T15:18:20.965Z  
+**Runtime:** 243 ms (beats 68.37%)  
+**Memory:** 143.6 MB (beats 75.51%)  
+**Submitted:** 2026-09-01T15:18:27.974Z  
 
 ```cpp
 class Solution {
