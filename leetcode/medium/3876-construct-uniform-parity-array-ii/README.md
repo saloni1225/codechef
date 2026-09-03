@@ -63,25 +63,27 @@ It is not possible to construct `nums2` such that all elements have the same par
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-09-03T13:17:24.403Z  
+**Runtime:** 1 ms (beats 79.58%)  
+**Memory:** 165.8 MB (beats 62.83%)  
+**Submitted:** 2026-09-03T13:19:20.509Z  
 
 ```cpp
 class Solution {
 public:
     bool uniformArray(vector<int>& nums1) {
-        int mnOdd = INT_MAX;
+        int smallestOdd = INT_MAX;
 
         for (int x : nums1) {
-            if (x % 2)
-                mnOdd = min(mnOdd, x);
+            if (x % 2 != 0) {
+                smallestOdd = min(smallestOdd, x);
+            }
         }
+        if (smallestOdd == INT_MAX)
+            return true;
 
         for (int x : nums1) {
-            if (x % 2 == 0) {
-                if (mnOdd >= x)
-                    return false;
+            if (x % 2 == 0 && x <= smallestOdd) {
+                return false;
             }
         }
 
