@@ -48,8 +48,8 @@ babgbag
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-09-06T12:55:44.557Z  
+**Memory:** 7.9 MB  
+**Submitted:** 2026-09-06T12:57:37.356Z  
 
 ```cpp
 class Solution {
@@ -59,12 +59,13 @@ public:
         int m = t.size();
 
         vector<long long> dp(m + 1, 0);
+
         dp[0] = 1;
 
-        for (int i = 1; i <= n; i++) {
-            for (int j = min(i, m); j >= 1; j--) {
-                if (s[i - 1] == t[j - 1]) {
-                    dp[j] += dp[j - 1];
+        for (int i = 0; i < n; i++) {
+            for (int j = m; j >= 1; j--) {
+                if (s[i] == t[j - 1]) {
+                    dp[j] = dp[j] + dp[j - 1];
                 }
             }
         }
