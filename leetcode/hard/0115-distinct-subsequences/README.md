@@ -47,9 +47,9 @@ babgbag
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.9 MB  
-**Submitted:** 2026-09-06T12:58:29.546Z  
+**Runtime:** 8 ms (beats 90.60%)  
+**Memory:** 8.9 MB (beats 91.43%)  
+**Submitted:** 2026-09-06T12:58:35.915Z  
 
 ```cpp
 class Solution {
