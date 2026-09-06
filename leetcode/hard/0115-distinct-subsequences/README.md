@@ -49,7 +49,7 @@ babgbag
 **Language:** C++  
 **Runtime:** 0 ms  
 **Memory:** 7.9 MB  
-**Submitted:** 2026-09-06T12:57:37.356Z  
+**Submitted:** 2026-09-06T12:58:29.546Z  
 
 ```cpp
 class Solution {
@@ -59,13 +59,13 @@ public:
         int m = t.size();
 
         vector<long long> dp(m + 1, 0);
-
         dp[0] = 1;
 
         for (int i = 0; i < n; i++) {
             for (int j = m; j >= 1; j--) {
                 if (s[i] == t[j - 1]) {
-                    dp[j] = dp[j] + dp[j - 1];
+                    dp[j] = min((long long)INT_MAX,
+                                dp[j] + dp[j - 1]);
                 }
             }
         }
