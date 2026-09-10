@@ -10,8 +10,8 @@ public:
                 return true;
             }
             char temp=s[0];
-            for(int i=1;i<n;i++){
-                s[i-1]=s[i];
+            for(int j=1;j<n;j++){
+                s[j-1]=s[j];
             }
             s[n-1]=temp;
             }
