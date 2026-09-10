@@ -38,9 +38,9 @@ Output: false
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 10.64%)  
-**Memory:** 8.2 MB (beats 23.55%)  
-**Submitted:** 2026-09-10T15:22:50.415Z  
+**Runtime:** 0 ms  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-09-10T15:23:20.513Z  
 
 ```cpp
 class Solution {
@@ -55,8 +55,8 @@ public:
                 return true;
             }
             char temp=s[0];
-            for(int j=1;j<n;j++){
-                s[j-1]=s[j];
+            for(int i=1;i<n;i++){
+                s[i-1]=s[i];
             }
             s[n-1]=temp;
             }
