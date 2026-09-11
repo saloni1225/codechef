@@ -29,17 +29,14 @@ Explanation: Since string contains digits other than '0' and '1', output is fals
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-11T08:46:15.137Z  
+**Submitted:** 2026-09-11T08:54:55.977Z  
 
 ```cpp
 class Solution {
   public:
     bool isBinary(string& s) {
     for(int i=0;i<s.length();i++){
-        if(s[i]=='0' || s[i]=='1'){
-            continue;
-        }
-        else{
+        if(s[i]!='0' && s[i]!='1'){
             return false;
         }
     }
