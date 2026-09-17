@@ -50,9 +50,9 @@ Explanation: We have only one sub-array of sum = 6.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-09-17T12:50:52.951Z  
+**Runtime:** 4 ms (beats 88.92%)  
+**Memory:** 88.8 MB (beats 93.56%)  
+**Submitted:** 2026-09-17T12:50:59.156Z  
 
 ```cpp
 class Solution {
