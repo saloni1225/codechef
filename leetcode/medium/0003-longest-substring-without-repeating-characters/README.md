@@ -46,32 +46,27 @@ Notice that the answer must be a substring, "pwke" is a subsequence and not a su
 ## Solution
 
 **Language:** C++  
-**Runtime:** 303 ms (beats 14.52%)  
-**Memory:** 81.3 MB (beats 13.77%)  
-**Submitted:** 2026-08-27T11:48:58.006Z  
+**Runtime:** 17 ms (beats 66.32%)  
+**Memory:** 17.9 MB (beats 80.67%)  
+**Submitted:** 2026-09-18T13:59:44.972Z  
 
 ```cpp
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        unordered_set<char> st;
-
-        int left = 0;
-        int maxlen = 0;
-
-        for(int right = 0; right < s.length(); right++) {
-
-            while(st.count(s[right])) {
-                st.erase(s[left]);
-                left++;
+        //your code goes here
+        int first=0,second=0,len=0;
+        vector<bool>substr(256,0);
+        while(second<s.size()){
+            while(substr[s[second]]){
+                substr[s[first]]=0;
+                first++;
             }
-
-            st.insert(s[right]);
-
-            maxlen = max(maxlen, right - left + 1);
+            substr[s[second]]=1;
+            len=max(len,(second-first+1));
+            second++;
         }
-
-        return maxlen;
+        return len;
     }
 };
 ```
