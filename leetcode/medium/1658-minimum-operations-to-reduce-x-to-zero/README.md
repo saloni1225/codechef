@@ -48,8 +48,8 @@ Explanation: The optimal solution is to remove the last three elements and the f
 
 **Language:** C++  
 **Runtime:** 4 ms (beats 60.60%)  
-**Memory:** 102.3 MB (beats 91.82%)  
-**Submitted:** 2026-09-23T14:00:11.346Z  
+**Memory:** 102.4 MB (beats 38.48%)  
+**Submitted:** 2026-09-23T14:00:20.915Z  
 
 ```cpp
 class Solution {
