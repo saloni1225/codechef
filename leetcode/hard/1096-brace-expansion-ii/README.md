@@ -51,8 +51,8 @@ Explanation: Each distinct word is written only once in the final answer.
 
 **Language:** C++  
 **Runtime:** 11 ms (beats 49.11%)  
-**Memory:** 16.2 MB (beats 44.64%)  
-**Submitted:** 2026-09-25T16:58:46.043Z  
+**Memory:** 16.2 MB (beats 43.30%)  
+**Submitted:** 2026-09-25T16:59:05.169Z  
 
 ```cpp
 class Solution {
