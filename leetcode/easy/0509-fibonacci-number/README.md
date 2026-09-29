@@ -51,21 +51,20 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
 ## Solution
 
-**Language:** C++  
-**Runtime:** 10 ms (beats 45.67%)  
-**Memory:** 7.9 MB (beats 37.46%)  
-**Submitted:** 2026-09-29T19:05:52.873Z  
+**Language:** Python  
+**Runtime:** 49 ms (beats 53.40%)  
+**Memory:** 19.4 MB (beats 19.81%)  
+**Submitted:** 2026-09-29T19:07:12.873Z  
 
-```cpp
-class Solution {
-public:
-    int fib(int n) {
-        if(n==0)return 0;
-        if(n==1)return 1;
+```py
+class Solution:
+    def fib(self, n: int) -> int:
+        a=0
+        b=1
+        for i in range (n):
+            a,b=b,a+b
         
-        return fib(n-1) + fib(n-2);
-    }
-};
+        return a
 ```
 
 ---
