@@ -45,9 +45,9 @@ Explanation: Sort the words in s to their original positions "Me1 Myself2 and3 I
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.6 MB (beats 42.09%)  
-**Submitted:** 2026-10-03T20:40:41.196Z  
+**Runtime:** 2 ms  
+**Memory:** 8 MB  
+**Submitted:** 2026-10-03T20:40:47.958Z  
 
 ```cpp
 class Solution {
