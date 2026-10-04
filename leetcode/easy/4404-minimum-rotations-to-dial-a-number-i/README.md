@@ -69,8 +69,8 @@ The total is `1 + 1 + 2 + 0 + 2 + 1 + 1 + 2 + 2 + 0 = 12`, which is the minimum 
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 8.7 MB (beats 57.14%)  
-**Submitted:** 2026-10-04T02:52:41.036Z  
+**Memory:** 8.9 MB (beats 14.29%)  
+**Submitted:** 2026-10-04T02:59:23.656Z  
 
 ```cpp
 class Solution {
