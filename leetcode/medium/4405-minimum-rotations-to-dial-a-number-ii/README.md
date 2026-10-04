@@ -86,9 +86,9 @@ The total is `1 + 2 + 1 + 2 = 6`, which is the minimum total number of rotations
 ## Solution
 
 **Language:** C++  
-**Runtime:** 7 ms (beats 53.85%)  
-**Memory:** 27.5 MB (beats 23.08%)  
-**Submitted:** 2026-10-04T02:59:14.980Z  
+**Runtime:** 19 ms (beats 30.77%)  
+**Memory:** 27.6 MB (beats 23.08%)  
+**Submitted:** 2026-10-04T02:59:36.684Z  
 
 ```cpp
 class Solution {
