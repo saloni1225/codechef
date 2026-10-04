@@ -86,9 +86,9 @@ The total is `1 + 2 + 1 + 2 = 6`, which is the minimum total number of rotations
 ## Solution
 
 **Language:** C++  
-**Runtime:** 19 ms (beats 30.77%)  
-**Memory:** 27.6 MB (beats 23.08%)  
-**Submitted:** 2026-10-04T02:59:36.684Z  
+**Runtime:** 12 ms (beats 38.46%)  
+**Memory:** 27.4 MB (beats 23.08%)  
+**Submitted:** 2026-10-04T02:59:57.188Z  
 
 ```cpp
 class Solution {
@@ -116,8 +116,7 @@ public:
             int oldDigit = s[k] - '0';
             int newDigit = s[n - 1] - '0';
 
-            int cost = total - dist(prev, oldDigit)
-                             + dist(prev, newDigit);
+            int cost = total - dist(prev, oldDigit) + dist(prev, newDigit);
 
             ans = min(ans, cost);
         }
