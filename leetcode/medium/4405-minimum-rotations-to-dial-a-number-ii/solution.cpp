@@ -23,8 +23,7 @@ public:
             int oldDigit = s[k] - '0';
             int newDigit = s[n - 1] - '0';
 
-            int cost = total - dist(prev, oldDigit)
-                             + dist(prev, newDigit);
+            int cost = total - dist(prev, oldDigit) + dist(prev, newDigit);
 
             ans = min(ans, cost);
         }
