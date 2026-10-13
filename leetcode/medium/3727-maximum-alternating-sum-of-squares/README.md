@@ -52,9 +52,9 @@ The alternating score is calculated as:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-10-13T18:29:29.909Z  
+**Runtime:** 74 ms (beats 23.22%)  
+**Memory:** 194.6 MB (beats 11.15%)  
+**Submitted:** 2026-10-13T18:29:36.345Z  
 
 ```cpp
 class Solution {
