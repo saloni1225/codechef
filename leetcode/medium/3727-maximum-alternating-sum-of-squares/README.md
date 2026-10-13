@@ -52,9 +52,9 @@ The alternating score is calculated as:
 ## Solution
 
 **Language:** C++  
-**Runtime:** 74 ms (beats 23.22%)  
-**Memory:** 194.6 MB (beats 11.15%)  
-**Submitted:** 2026-10-13T18:29:36.345Z  
+**Runtime:** 75 ms (beats 22.91%)  
+**Memory:** 194.3 MB (beats 16.10%)  
+**Submitted:** 2026-10-13T18:36:13.324Z  
 
 ```cpp
 class Solution {
@@ -66,14 +66,16 @@ public:
             v.push_back(sq);
         }
         sort(v.begin(),v.end());
-        long long nsum=0,psum=0;
-        for(int i =0;i<v.size()/2;i++){
-            nsum += 0-v[i];
+        long long sum=0;;
+        for(int i =0;i<v.size();i++){
+            if(i<v.size()/2){
+            sum += 0-v[i];
         }
-        for(int i =(v.size()/2);i<v.size();i++){
-            psum += v[i];
+            else{
+            sum += v[i];
         }
-        return nsum + psum;
+        }
+        return sum;
     }
 };
 ```
