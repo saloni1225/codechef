@@ -53,8 +53,8 @@ The alternating score is calculated as:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8 MB  
-**Submitted:** 2026-10-13T18:27:17.698Z  
+**Memory:** 8.1 MB  
+**Submitted:** 2026-10-13T18:27:39.556Z  
 
 ```cpp
 class Solution {
@@ -68,7 +68,7 @@ public:
         sort(v.begin(),v.end());
         int nsum=0,psum=0;
         for(int i =0;i<v.size()/2;i++){
-            nsum += (0 - v[i]);
+            nsum += -v[i];
         }
         for(int i =(v.size()/2);i<v.size();i++){
             psum += v[i];
