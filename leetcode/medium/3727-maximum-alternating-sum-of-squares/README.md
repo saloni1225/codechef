@@ -53,8 +53,8 @@ The alternating score is calculated as:
 
 **Language:** C++  
 **Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-10-13T18:27:39.556Z  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-13T18:29:29.909Z  
 
 ```cpp
 class Solution {
@@ -62,13 +62,13 @@ public:
     long long maxAlternatingSum(vector<int>& nums) {
         vector<int>v;
         for(int i =0;i<nums.size();i++){
-            int sq =nums[i]*nums[i];
+            long long sq =nums[i]*nums[i];
             v.push_back(sq);
         }
         sort(v.begin(),v.end());
-        int nsum=0,psum=0;
+        long long nsum=0,psum=0;
         for(int i =0;i<v.size()/2;i++){
-            nsum += -v[i];
+            nsum += 0-v[i];
         }
         for(int i =(v.size()/2);i<v.size();i++){
             psum += v[i];
