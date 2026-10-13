@@ -7,13 +7,15 @@ public:
             v.push_back(sq);
         }
         sort(v.begin(),v.end());
-        long long nsum=0,psum=0;
-        for(int i =0;i<v.size()/2;i++){
-            nsum += 0-v[i];
+        long long sum=0;;
+        for(int i =0;i<v.size();i++){
+            if(i<v.size()/2){
+            sum += 0-v[i];
         }
-        for(int i =(v.size()/2);i<v.size();i++){
-            psum += v[i];
+            else{
+            sum += v[i];
         }
-        return nsum + psum;
+        }
+        return sum;
     }
 };
