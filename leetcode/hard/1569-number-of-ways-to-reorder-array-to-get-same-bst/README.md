@@ -57,9 +57,9 @@ Explanation: There are no other orderings of nums that will yield the same BST.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 350 ms (beats 7.94%)  
-**Memory:** 297.9 MB (beats 25.63%)  
-**Submitted:** 2026-10-18T15:57:10.125Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-10-18T15:57:23.276Z  
 
 ```cpp
 class Solution {
