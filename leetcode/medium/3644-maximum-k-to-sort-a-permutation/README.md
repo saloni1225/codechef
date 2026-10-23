@@ -53,9 +53,9 @@ Only `k = 0` allows sorting since no greater `k` allows the required swaps where
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 46.67%)  
-**Memory:** 152.8 MB (beats 47.62%)  
-**Submitted:** 2026-10-23T11:48:19.479Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 152.5 MB (beats 98.10%)  
+**Submitted:** 2026-10-23T11:48:29.402Z  
 
 ```cpp
 class Solution {
