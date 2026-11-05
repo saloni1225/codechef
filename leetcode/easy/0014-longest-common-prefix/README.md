@@ -39,8 +39,8 @@ Explanation: There is no common prefix among the input strings.
 
 **Language:** C++  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 12.2 MB (beats 11.70%)  
-**Submitted:** 2026-11-05T09:10:09.585Z  
+**Memory:** 11.9 MB (beats 35.95%)  
+**Submitted:** 2026-11-05T09:17:26.975Z  
 
 ```cpp
 class Solution {
@@ -49,11 +49,11 @@ public:
        if(strs.empty()) return "";
        sort(strs.begin(),strs.end());
        vector<char>ans;
-       string st=strs[0];
-       string ed=strs[strs.size()-1];
-       for(int i=0;i<min(st.size(),ed.size());i++){
-        if(st[i] != ed[i])break;
-            ans.push_back(st[i]);
+       string firstword=strs[0];
+       string endword=strs[strs.size()-1];
+       for(int i=0;i<min(firstword.size(),endword.size());i++){
+        if(firstword[i] != endword[i])break;
+            ans.push_back(firstword[i]);
        }
        return string(ans.begin(),ans.end());
     }
