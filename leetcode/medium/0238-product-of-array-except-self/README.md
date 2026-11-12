@@ -45,29 +45,29 @@ Output: [0,0,9,0,0]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 5 ms (beats 7.54%)  
-**Memory:** 43.7 MB (beats 5.61%)  
-**Submitted:** 2026-11-12T19:44:31.399Z  
+**Runtime:** 1 ms (beats 65.21%)  
+**Memory:** 40.2 MB (beats 53.95%)  
+**Submitted:** 2026-11-12T20:01:51.083Z  
 
 ```cpp
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        int n=nums.size();
-        vector<int>ans;
-        vector<int>leftp(n,1);
-        vector<int>rightp(n,1);
-        for(int i=1;i<n;i++){
-            leftp[i]=leftp[i-1]*nums[i-1];
+        int n = nums.size();
+        vector<int> ans(n, 1);
+
+        for(int i = 1; i < n; i++) {
+            ans[i] = ans[i-1] * nums[i-1];
         }
-         for(int i=n-2;i>=0;i--){
-            rightp[i]=rightp[i+1]*nums[i+1];
+
+        int right = 1;
+
+        for(int i = n-1; i >= 0; i--) {
+            ans[i] *= right;
+            right *= nums[i];
         }
-        for(int i=0;i<n;i++){
-            int finalp=leftp[i]*rightp[i];
-            ans.push_back(finalp);
-        }
-    return ans;
+
+        return ans;
     }
 };
 ```
