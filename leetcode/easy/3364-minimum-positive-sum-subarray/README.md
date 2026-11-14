@@ -62,9 +62,9 @@ The subarray `[1, 2]` has a length of 2 and the minimum sum greater than 0. So, 
 ## Solution
 
 **Language:** C++  
-**Runtime:** 38 ms (beats 5.08%)  
-**Memory:** 29.3 MB (beats 88.62%)  
-**Submitted:** 2026-11-14T18:06:42.538Z  
+**Runtime:** 0 ms  
+**Memory:** 8.3 MB  
+**Submitted:** 2026-11-14T20:07:28.319Z  
 
 ```cpp
 class Solution {
@@ -73,13 +73,11 @@ public:
         int n=nums.size();
         int minm=INT_MAX;
         for(int i=0;i<n;i++){
-            for(int j=i;j<n;j++){
-                int sum =0;
-                for(int k=i;k<=j;k++){
-                    sum += nums[k];
-                }
+            int sum =0;
+            for(int j=i;j<n && j-i+1<=r;j++){
+                sum += nums[j];
                 int len=j-i+1;
-                if(len>=l && len <=r && sum>0){
+                if(len>=l && sum>0){
                     minm=min(minm,sum);
                 }
             }
