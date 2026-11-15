@@ -52,26 +52,35 @@ Output: 16
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.1 MB  
-**Submitted:** 2026-11-15T13:50:31.966Z  
+**Runtime:** 6 ms (beats 40.65%)  
+**Memory:** 111.9 MB (beats 91.69%)  
+**Submitted:** 2026-11-15T13:53:16.870Z  
 
 ```cpp
 class Solution {
 public:
     int numOfSubarrays(vector<int>& arr) {
-        int count=0;
-        int n =arr.size();
+        long long odd = 0;
+        long long even = 1;
+        long long count = 0;
+        int sum = 0;
+        int mod = 1e9 + 7;
 
-        for(int i =0;i<n;i++){
-            int sum=0;
-            for(int j=i;j<n;j++){
-                sum +=arr[j];
-                if(sum%2!=0){
-                count++;
-                }
+        for(int i = 0; i < arr.size(); i++){
+            sum += arr[i];
+
+            if(sum % 2 != 0){
+                count += even;
+                odd++;
             }
+            else{
+                count += odd;
+                even++;
+            }
+
+            count %= mod;
         }
+
         return count;
     }
 };
