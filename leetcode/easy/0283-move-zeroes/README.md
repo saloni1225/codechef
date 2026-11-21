@@ -42,9 +42,9 @@ Output: [0]
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 8.2 MB  
-**Submitted:** 2026-11-21T11:44:15.207Z  
+**Runtime:** 1 ms (beats 21.50%)  
+**Memory:** 23.9 MB (beats 14.71%)  
+**Submitted:** 2026-11-21T11:44:38.063Z  
 
 ```cpp
 class Solution {
@@ -52,7 +52,7 @@ public:
     void moveZeroes(vector<int>& nums) {
         int j=0;
         for(int i=0;i<nums.size();i++){
-            if(nums[i]!=nums[j]){
+            if(nums[i]!=0){
                 swap(nums[i],nums[j]);
                 j++;
             }
