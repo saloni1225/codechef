@@ -8,6 +8,8 @@ Given an integer array `nums`, find the subarray with the largest sum, and retur
 
  
 
+Original
+C++
  **Example 1:** 
 
 ```
@@ -49,22 +51,21 @@ Explanation: The subarray [5,4,-1,7,8] has the largest sum 23.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 1 ms (beats 25.23%)  
-**Memory:** 71.7 MB (beats 80.75%)  
-**Submitted:** 2026-10-10T18:13:51.724Z  
+**Runtime:** 0 ms  
+**Memory:** 8.2 MB  
+**Submitted:** 2026-11-21T12:20:14.741Z  
 
 ```cpp
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        int sum = 0;
-        int maxsum = INT_MIN;
-        for(int i =0; i<nums.size();i++){
+        int maxsum=INT_MIN;
+        int sum =0;
+        for(int i=0;i<nums.size();i++){
             sum += nums[i];
-            maxsum = max(sum,maxsum);
-            if(sum < 0){
-                sum = 0;
-            }
+            if(sum<0)sum=0;
+            else
+                maxsum=max(sum,maxsum);
         }
         return maxsum;
     }
