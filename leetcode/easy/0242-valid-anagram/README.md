@@ -36,15 +36,15 @@ C++
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 53.65%)  
-**Memory:** 9.7 MB (beats 67.55%)  
-**Submitted:** 2026-11-25T18:03:15.909Z  
+**Runtime:** 0 ms  
+**Memory:** 7.8 MB  
+**Submitted:** 2026-11-25T18:03:24.605Z  
 
 ```cpp
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        vector<int>ans(256,0);
+        vector<int>ans(26,0);
         if(s.size() != t.size()) return false;
         for(int i=0;i<t.size();i++){
             ans[s[i] - 'a']++;
