@@ -50,9 +50,9 @@ Since an empty string reads the same forward and backward, it is a palindrome.
 ## Solution
 
 **Language:** C++  
-**Runtime:** 2 ms (beats 40.63%)  
-**Memory:** 10.3 MB (beats 13.05%)  
-**Submitted:** 2026-11-25T17:40:04.450Z  
+**Runtime:** 3 ms (beats 22.29%)  
+**Memory:** 10.5 MB (beats 10.87%)  
+**Submitted:** 2026-11-25T17:45:00.250Z  
 
 ```cpp
 class Solution {
@@ -61,18 +61,17 @@ public:
         vector<char>ans;
         for(int i=0;i<s.size();i++){
             if(isalnum(s[i])){
-            ans.push_back(tolower(s[i]));
+                ans.push_back(tolower(s[i]));
             }
         }
         int i=0,j=ans.size()-1;
         while(i<j){
             if(ans[i] != ans[j]){
-                return false;
+                return 0;
             }
             i++;j--;
         }
-        return true;
-        
+        return 1;
     }
 };
 ```
