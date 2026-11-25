@@ -36,9 +36,9 @@ C++
 ## Solution
 
 **Language:** C++  
-**Runtime:** 0 ms  
-**Memory:** 7.8 MB  
-**Submitted:** 2026-11-25T18:03:24.605Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 9.7 MB (beats 67.55%)  
+**Submitted:** 2026-11-25T18:03:31.759Z  
 
 ```cpp
 class Solution {
